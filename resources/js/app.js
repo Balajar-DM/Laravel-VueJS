@@ -2,6 +2,10 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+import {HasError, AlertError} from 'vform/src/components/bootstrap5';
+Vue.component(HasError.name, HasError);
+Vue.component(AlertError.name, AlertError);
+
 import Vue from 'vue';
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)

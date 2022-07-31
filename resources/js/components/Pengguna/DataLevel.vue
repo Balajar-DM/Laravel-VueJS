@@ -6,7 +6,18 @@
                     <div class="card-header">Data Level</div>
 
                     <div class="card-body">
-                        Ini adalah halaman dari Data Level
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <td>Nama Level</td>
+                                    <td>Aksi</td>
+                                </tr>
+                                <tr v-for="item in levels" :key="item.message">
+                                    <td>{{ item.nama_level }}</td>
+                                    <td> Edit | Hapus </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -16,8 +27,18 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        data(){
+            return{
+                levels :{}
+            };
+        },
+        methods: {
+            loadData(){
+                axios.get('api/ambildatalevel').then(({data}) => (this.levels = data));
+            }
+        },
+        created() {
+            this.loadData();
         }
     }
 </script>

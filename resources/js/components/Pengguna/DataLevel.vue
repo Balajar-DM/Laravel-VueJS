@@ -9,10 +9,10 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tr>
-                                    <td>Nama Level</td>
-                                    <td>Aksi</td>
+                                    <th>Nama Level</th>
+                                    <th>Aksi</th>
                                 </tr>
-                                <tr v-for="item in levels" :key="item.message">
+                                <tr v-for="item in levels" :key="item.id">
                                     <td>{{ item.nama_level }}</td>
                                     <td> Edit | Hapus </td>
                                 </tr>

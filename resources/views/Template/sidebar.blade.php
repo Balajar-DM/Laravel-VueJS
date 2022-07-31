@@ -43,10 +43,16 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <router-link to="data-user" class="nav-link">
                                 <i class="fa-solid fa-users nav-icon"></i>
                                 <p>Data User</p>
-                            </a>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="data-level" class="nav-link">
+                                <i class="fa-solid fa-users nav-icon"></i>
+                                <p>Data Level</p>
+                            </router-link>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">

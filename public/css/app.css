@@ -49782,3 +49782,10 @@ readers do not read off random characters that represent icons */
 .fa-zhihu:before {
   content: "\f63f";
 }
+
+.router-link-exact-active {
+  background-color: #760933;
+  color: rgb(255, 255, 255) !important;
+  font-style: italic;
+  font-weight: bold;
+}

@@ -50,7 +50,7 @@
                         </li>
                         <li class="nav-item">
                             <router-link to="data-level" class="nav-link">
-                                <i class="fa-solid fa-users nav-icon"></i>
+                                <i class="fas fa-layer-group nav-icon"></i>
                                 <p>Data Level</p>
                             </router-link>
                         </li>

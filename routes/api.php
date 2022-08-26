@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\LevelController;
+use App\Http\Controllers\API\UsersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('ambildatalevel', [LevelController::class, 'index']);
+
+Route::resource('/user', UsersController::class);

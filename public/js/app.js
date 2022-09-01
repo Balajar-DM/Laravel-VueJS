@@ -5470,6 +5470,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5497,7 +5528,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     simpanData: function simpanData() {
-      this.form.post('api/user').then(function () {
+      this.form.post("api/user").then(function () {
         $("#modal-input").modal("hide");
       })["catch"]();
     }
@@ -43199,7 +43230,7 @@ var render = function () {
                       [
                         _c(
                           "option",
-                          { attrs: { disabled: "", selected: "" } },
+                          { attrs: { selected: "", disabled: "" } },
                           [_vm._v("Pilih Level")]
                         ),
                         _vm._v(" "),
@@ -43207,7 +43238,13 @@ var render = function () {
                           return _c(
                             "option",
                             { key: item.id, domProps: { value: item.id } },
-                            [_vm._v(_vm._s(item.nama_level))]
+                            [
+                              _vm._v(
+                                "\n                  " +
+                                  _vm._s(item.nama_level) +
+                                  "\n                "
+                              ),
+                            ]
                           )
                         }),
                       ],

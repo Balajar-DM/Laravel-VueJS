@@ -39,7 +39,13 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modal-input" tabindex="-1" aria-labelledby="modal-input1" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="modal-input"
+      tabindex="-1"
+      aria-labelledby="modal-input1"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -55,26 +61,51 @@
             <div class="modal-body">
               <div class="form-group">
                 <label>Nama</label>
-                <input type="text" v-model="form.name" class="form-control" placeholder="Nama"/>
+                <input
+                  type="text"
+                  v-model="form.name"
+                  class="form-control"
+                  placeholder="Nama"
+                />
               </div>
               <div class="form-group">
                 <label>Level</label>
                 <select id="" class="form-control" v-model="form.level_id">
-                    <option disabled selected>Pilih Level</option>
-                    <option v-for="item in levels" :key="item.id" :value="item.id">{{ item.nama_level }}</option>
+                  <option selected disabled>Pilih Level</option>
+                  <option
+                    v-for="item in levels"
+                    :key="item.id"
+                    :value="item.id"
+                  >
+                    {{ item.nama_level }}
+                  </option>
                 </select>
               </div>
               <div class="form-group">
                 <label>Email</label>
-                <input type="text" v-model="form.email" class="form-control" placeholder="Email"/>
+                <input
+                  type="text"
+                  v-model="form.email"
+                  class="form-control"
+                  placeholder="Email"
+                />
               </div>
               <div class="form-group">
                 <label>Password</label>
-                <input type="password" v-model="form.password" class="form-control" placeholder="Password"/>
+                <input
+                  type="password"
+                  v-model="form.password"
+                  class="form-control"
+                  placeholder="Password"
+                />
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
                 Batal
               </button>
               <button type="submit" class="btn btn-primary">
@@ -112,12 +143,14 @@ export default {
     loadData() {
       axios.get("api/ambildatalevel").then(({ data }) => (this.levels = data));
     },
-    simpanData(){
-        this.form.post('api/user').then(() => {
-            $("#modal-input").modal("hide");
+    simpanData() {
+      this.form
+        .post("api/user")
+        .then(() => {
+          $("#modal-input").modal("hide");
         })
         .catch();
-    }
+    },
   },
   created() {
     this.loadData();
